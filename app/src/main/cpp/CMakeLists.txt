@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.4.1)
 
 file(TO_CMAKE_PATH ${PATH_TO_SUPERPOWERED} PATH_TO_SUPERPOWERED)
 
-include_directories(C:/develop/musicstuff/app/Superpowered/)
+include_directories(${PATH_TO_SUPERPOWERED})
 
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
