@@ -5,6 +5,8 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
+file(TO_CMAKE_PATH ${PATH_TO_SUPERPOWERED} PATH_TO_SUPERPOWERED)
+
 include_directories(C:/develop/musicstuff/app/Superpowered/)
 
 # Creates and names a library, sets it as either STATIC
@@ -26,7 +28,7 @@ add_library(
         CrossExample
         SHARED
         CrossExample.cpp
-        C:/develop/musicstuff/app/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp)
+        ${PATH_TO_SUPERPOWERED}/OpenSource/SuperpoweredAndroidAudioIO.cpp)
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
@@ -59,5 +61,5 @@ target_link_libraries(
         log
         android
         OpenSLES
-        C:/develop/musicstuff/app/Superpowered/libSuperpoweredAndroid${ANDROID_ABI}.a
+        ${PATH_TO_SUPERPOWERED}/libSuperpoweredAndroid${ANDROID_ABI}.a
 )
